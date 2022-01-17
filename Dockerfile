@@ -6,4 +6,5 @@ RUN mvn clean install -DskipTests
 FROM openjdk:11
 WORKDIR /app
 COPY --from=build /app/  /app/
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app/target/addressbook.jar"]
