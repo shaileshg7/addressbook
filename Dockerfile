@@ -6,4 +6,4 @@ RUN mvn clean install -U -DskipTests
 FROM openjdk:11
 WORKDIR /app
 COPY --from=build /app/  /app/
-ENTRYPOINT ["java","-jar","/app/target/addressbook.war"]
+ENTRYPOINT ["java","-jar","/app/target/addressbook.jar"]
